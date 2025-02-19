@@ -13,9 +13,14 @@ int add(int myNumber) {
     total += myNumber;
     return total;
   }
-
+  
 //forma incial
 int main() {
+
+    //função de adição (add)
+    printf("%d\n", add(1)); // 1
+    printf("%d\n", add(2)); // 3
+
     //declaração de variáveis
     int numero = 10;
     float numero2 = 10.5; //até 7 casas decimais
