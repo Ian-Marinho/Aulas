@@ -54,8 +54,29 @@ int main() {
     scanf("%d", & numero); //entrada de dados
     printf("O valor de numero é: %d\n", numero);//%d ou %i para int
 
-    //condicionais
+
+    //entrada de dados com string
+    char nome[20]; //cria variavel de string com [x] caracteres
+    printf("Digite seu nome: "); 
     
+    scanf("%s", nome); //scanf pegar string (sem espaço)
+    scanf("%[^\n]", nome); //scanf pegando string. [^\n] é para pegar até o enter (mudar de linha)
+    fgets("%s", nome, stdin); //fgets pegar string (com espaço) e stdin é a entrada padrão
+    //nao colocar & quando escrever string no scanf ou no fgets
+    
+    //restringindo casas decimais
+    printf("O numero é %.2f\n", numero2); //%.2f para float com 2 casas decimais
+
+    
+
+    //condicionais
+    if (numero > 10) { //se
+        printf("O numero é maior que 10\n");
+    } else if (numero == 10) { //senão se
+        printf("O numero é igual a 10\n");
+    } else { //senão
+        printf("O numero é menor que 10\n");
+    }
     
 
     //retorno da função
