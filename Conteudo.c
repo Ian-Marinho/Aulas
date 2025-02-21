@@ -7,13 +7,13 @@
 #include <time.h> //biblioteca de funções de manipulação de tempo
 #include <locale.h> //biblioteca de funções de manipulação de localidade
 
-//função (de adição)
+//função (de adição) (criando função com retorno)
 int add(int myNumber) {
     static int total = 0; //valoer statico que não é resetado
     total += myNumber;
     return total;
   }
-  //oi
+
 //forma incial
 int main() {
 
@@ -61,8 +61,11 @@ int main() {
     
     scanf("%s", nome); //scanf pegar string (sem espaço)
     scanf("%[^\n]", nome); //scanf pegando string. [^\n] é para pegar até o enter (mudar de linha)
+    getchar(); //limpar buffer do teclado (se tiver algo escrito ele vai ser apagado para que se escreva sem ter coisa escrita ja)
     fgets("%s", nome, stdin); //fgets pegar string (com espaço) e stdin é a entrada padrão
     //nao colocar & quando escrever string no scanf ou no fgets
+    
+
     
     //restringindo casas decimais
     printf("O numero é %.2f\n", numero2); //%.2f para float com 2 casas decimais
@@ -70,15 +73,78 @@ int main() {
     
 
     //condicionais
-    if (numero > 10) { //se
-        printf("O numero é maior que 10\n");
-    } else if (numero == 10) { //senão se
-        printf("O numero é igual a 10\n");
-    } else { //senão
-        printf("O numero é menor que 10\n");
+    if (numero > 10) { //se (condição)
+        printf("O numero é maior que 10\n");// { o que fazer se condição for verdadeira}
+    } else if (numero == 10) { //senão se (outra condição)
+        printf("O numero é igual a 10\n");//o que fazer se a nova condição for verdadeira
+    } else { //se nenhuma das condições anteriores for verdadeira
+        printf("O numero é menor que 10\n"); //fazer o que está aqui
     }
+
     
+    if (numero >0 || numero < 10) { //se (condição) ou (outra condição) pode ser tbm || (or)
+        printf("O numero é maior que 0 e menor que 10\n");// { o que fazer se condição for verdadeira}
+    } 
+
+    if (numero >=10 && numero >= 0) { //se (condição) e (outra condição) pode ser tbm && (e)
+        printf("O numero é maior ou igual a 10 e maior ou igual a 0\n"); //o que fazer se a nova condição for verdadeira
+    }
+        
+      /* 
+    >= maior ou igual
+    <= menor ou igual
+    == igual
+    != diferente
+    */
+    
+    //matematica
+    
+    //resto
+    int num;
+    printf("Digite um número: ");
+    scanf("%i", &num);
+    if (num % 2 == 0) { // %x é o resto da divisão por x
+        printf("Numero é par");
+    } else {
+        printf("Numero é impar");
+    }
 
     //retorno da função
-    return 0; //se voltar 1 ta errado
+    return 0; //se voltar 1 tem erro, se voltar 0 está tudo certo
 }
+
+
+
+
+/*comandos de compilação
+gcc (nome do arquivo.c) -o (nome do arquivo executavel a ser criado)
+./nome do arquivo executavel
+*/
+
+/*Comandos do github
+git init (inicia o git)
+git add . (adiciona todos os arquivos)
+git commit -m "mensagem" (comita os arquivos)
+git remote add origin (link do repositorio) (adiciona o repositorio remoto)
+git push -u origin master (envia os arquivos para o repositorio)
+git pull (puxa os arquivos do repositorio)
+git clone (link do repositorio) (clona o repositorio)
+git status (mostra o status dos arquivos)
+git log (mostra o log de commits)
+git branch (mostra as branchs)
+git checkout -b (nome da branch) (cria uma branch)
+git checkout (nome da branch) (muda para a branch)
+git merge (nome da branch) (faz merge de duas branchs)
+git branch -d (nome da branch) (deleta a branch)
+git push origin --delete (nome da branch) (deleta a branch remota)
+git config --global user.email "  (configura o email do usuario)
+git config --global user.name "  (configura o nome do usuario)
+git reset --hard (volta para o ultimo commit)
+git reset --hard (hash do commit) (volta para o commit especificado)
+git reset --soft (hash do commit) (volta para o commit especificado)
+git reset --mixed (hash do commit) (volta para o commit especificado)
+git reset --hard HEAD~1 (volta para o commit anterior)
+git reset --soft HEAD~1 (volta para o commit anterior)
+git reset --mixed HEAD~1 (volta para o commit anterior)
+git reflog (mostra o log de commits)     
+*/
