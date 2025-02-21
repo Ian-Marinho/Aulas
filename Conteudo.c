@@ -13,7 +13,7 @@ int add(int myNumber) {
     total += myNumber;
     return total;
   }
-  
+  //oi
 //forma incial
 int main() {
 
@@ -54,7 +54,10 @@ int main() {
     scanf("%d", & numero); //entrada de dados
     printf("O valor de numero é: %d\n", numero);//%d ou %i para int
 
+    //condicionais
     
+    
+
     //retorno da função
     return 0; //se voltar 1 ta errado
 }
