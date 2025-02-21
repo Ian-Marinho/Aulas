@@ -9,7 +9,7 @@
 
 //função (de adição)
 int add(int myNumber) {
-    static int total = 0;
+    static int total = 0; //valoer statico que não é resetado
     total += myNumber;
     return total;
   }
@@ -54,10 +54,7 @@ int main() {
     scanf("%d", & numero); //entrada de dados
     printf("O valor de numero é: %d\n", numero);//%d ou %i para int
 
-    //mexendo com static
     
-
-
     //retorno da função
     return 0; //se voltar 1 ta errado
 }
