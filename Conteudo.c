@@ -27,7 +27,7 @@ int main() {
     double PI = 3.14159265; //até 15 casas decimais
     char letra = 'a'; //um caractere
     char tal = "palavra"; //uma string
-    char palavra[10] = "palavra";//uma string
+    char palavra[10] = "palavra";//uma string usando char para falar q é char*10
     bool verdadeiro = 1; //verdadeiro
     bool falso = 0; //falso
     const int constante = 10; //constante (valor imutavel)
@@ -89,6 +89,13 @@ int main() {
     if (numero >=10 && numero >= 0) { //se (condição) e (outra condição) pode ser tbm && (e)
         printf("O numero é maior ou igual a 10 e maior ou igual a 0\n"); //o que fazer se a nova condição for verdadeira
     }
+
+    //while
+    while (numero > numero2)
+    {
+        /* code */
+    }
+    
         
       /* 
     >= maior ou igual
@@ -97,6 +104,20 @@ int main() {
     != diferente
     */
     
+    //switch
+    switch (numero) //escolha (variavel) 
+    {
+    case 2: //caso (variavel) igual a valor: //se for um char usar 'valor' não usar "valor"
+        printf("caso1");
+        break;//parar o switch
+    case 3:
+        printf("Caso2");
+        break;
+    
+    default: //caso não tenha nenhum caso anterior
+        printf("nenhum caso");
+        break;
+    }
     //matematica
     
     //resto
