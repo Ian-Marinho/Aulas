@@ -25,8 +25,7 @@ int main() {
     int numero = 10;
     float numero2 = 10.5; //até 7 casas decimais
     double PI = 3.14159265; //até 15 casas decimais
-    char letra = 'a'; //um caractere
-    char tal = "palavra"; //uma string
+    char letra = 'a'; //um caracterer
     char palavra[10] = "palavra";//uma string usando char para falar q é char*10
     bool verdadeiro = 1; //verdadeiro
     bool falso = 0; //falso
@@ -44,8 +43,7 @@ int main() {
     printf("O valor de numero é: %d\n", numero);//%d ou %i para int
     printf("O valor de numero2 é: %f\n", numero2); //%f para float
     printf("O valor de letra é: %c\n", letra);//%c para char
-    printf("O valor de PI é: %ld\n", PI);//%lf ou ld para double
-    printf("O valor de tal é: %s\n", tal);//%s para string (mais de um caractere)
+    printf("O valor de PI é: %lfd\n", PI);//%lf ou ld para double
     printf("O valor de palavra é: %s\n", palavra);//%s para string (mais de um caractere)
     printf("O valor de verdadeiro é: %d\n", verdadeiro);//%d para bool (pois retorna 1 ou 0)
     printf("O valor de falso é: %d\n", falso); //%d para bool (pois retorna 1 ou 0)
@@ -118,6 +116,13 @@ int main() {
         printf("nenhum caso");
         break;
     }
+    //estruturas de repetição
+    int i = 1;
+    while (i<100){ //enquanto (condição) for verdadeira
+        printf("Numero %i", i); //imprimir toda hora i com um numero maior
+        i++; //incremento de um por execução
+    }
+
     //matematica
     
     //resto
