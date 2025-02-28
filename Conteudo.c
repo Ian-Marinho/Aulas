@@ -120,7 +120,7 @@ int main() {
     //estruturas de repetição
     int i = 1;
     while (i<100){ //enquanto (condição) for verdadeira
-        printf("Numero %i", i); //imprimir toda hora i com um numero maior
+        printf("Numero %i/n", i); //imprimir toda hora i com um numero maior
         i++; //incremento de um por execução
     }
 
