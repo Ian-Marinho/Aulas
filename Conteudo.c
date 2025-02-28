@@ -51,16 +51,17 @@ int main() {
     //entrada de dados  
     scanf("%d", & numero); //entrada de dados
     printf("O valor de numero é: %d\n", numero);//%d ou %i para int
-
+    getchar(); //limpar buffer do teclado (se tiver algo escrito ele vai ser apagado para que se escreva sem ter coisa escrita ja)
 
     //entrada de dados com string
     char nome[20]; //cria variavel de string com [x] caracteres
     printf("Digite seu nome: "); 
     
     scanf("%s", nome); //scanf pegar string (sem espaço)
+    getchar(); //limpar buffer do teclado (se tiver algo escrito ele vai ser apagado para que se escreva sem ter coisa escrita ja)
     scanf("%[^\n]", nome); //scanf pegando string. [^\n] é para pegar até o enter (mudar de linha)
     getchar(); //limpar buffer do teclado (se tiver algo escrito ele vai ser apagado para que se escreva sem ter coisa escrita ja)
-    fgets("%s", nome, stdin); //fgets pegar string (com espaço) e stdin é a entrada padrão
+    fgets(nome, 20, stdin); //fgets pegar string (com espaço) e stdin é a entrada padrão
     //nao colocar & quando escrever string no scanf ou no fgets
     
 
@@ -134,7 +135,9 @@ int main() {
     } else {
         printf("Numero é impar");
     }
-
+    getchar(); //limpar buffer do teclado (se tiver algo escrito ele vai ser apagado para que se escreva sem ter coisa escrita ja)
+    
+    
     //retorno da função
     return 0; //se voltar 1 tem erro, se voltar 0 está tudo certo
 }
