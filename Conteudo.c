@@ -39,12 +39,17 @@ int main() {
 
 
     //impressão de variáveis
+    printf("%i", numero++); //imprime o valor de numero e depois incrementa
+    printf("%i", ++numero); //incrementa o valor de numero e depois imprime
+
     printf("Hoje é %d", dia+1);//imprime o valor do enum especificado
+
     printf("O valor de numero é: %d\n", numero);//%d ou %i para int
     printf("O valor de numero2 é: %f\n", numero2); //%f para float
     printf("O valor de letra é: %c\n", letra);//%c para char
     printf("O valor de PI é: %lfd\n", PI);//%lf ou ld para double
     printf("O valor de palavra é: %s\n", palavra);//%s para string (mais de um caractere)
+    
     printf("O valor de verdadeiro é: %d\n", verdadeiro);//%d para bool (pois retorna 1 ou 0)
     printf("O valor de falso é: %d\n", falso); //%d para bool (pois retorna 1 ou 0)
 
@@ -59,9 +64,12 @@ int main() {
     
     scanf("%s", nome); //scanf pegar string (sem espaço)
     getchar(); //limpar buffer do teclado (se tiver algo escrito ele vai ser apagado para que se escreva sem ter coisa escrita ja)
+    
     scanf("%[^\n]", nome); //scanf pegando string. [^\n] é para pegar até o enter (mudar de linha)
     getchar(); //limpar buffer do teclado (se tiver algo escrito ele vai ser apagado para que se escreva sem ter coisa escrita ja)
+    
     fgets(nome, 20, stdin); //fgets pegar string (com espaço) e stdin é a entrada padrão
+    getchar(); //limpar buffer do teclado (se tiver algo escrito ele vai ser apagado para que se escreva sem ter coisa escrita ja)
     //nao colocar & quando escrever string no scanf ou no fgets
     
 
@@ -88,13 +96,38 @@ int main() {
     if (numero >=10 && numero >= 0) { //se (condição) e (outra condição) pode ser tbm && (e)
         printf("O numero é maior ou igual a 10 e maior ou igual a 0\n"); //o que fazer se a nova condição for verdadeira
     }
+    //operador tenario
+    int a,b,c;
+    a=2;
+    b=3;
+    c = (a >b)? a :b; //operador tenario compara se condição verdadeira. Se sim, o valor se torna o primeiro antes de :, se não ele vai depois do :
 
-    //while
-    while (numero > numero2)
+
+    //loops de repetição
+
+    while (numero > numero2) //while
     {
-        /* code */
+        printf("while\n");
     }
     
+    do { //do while
+        printf("do while\n");
+        numero2++;
+    } while (numero > numero2);
+
+    for (int cont= 0; cont < 10; cont++) //for (inicialização; condição; incremento)
+    {
+        printf("for\n");
+        if (cont == 5){
+            continue; //pula o resto do codigo e volta para o inicio do loop
+
+        } else if (cont == 8){
+            break; //para o loop
+        }
+    }
+    
+    
+
         
       /* 
     >= maior ou igual
@@ -124,8 +157,39 @@ int main() {
         i++; //incremento de um por execução
     }
 
-    //matematica
+    //stdlib & time (gerar num aleatorio)
+    srand(time(NULL)); //faz a seed ro rand ser o tempor atual
+    int aleatorio = rand() % 10; //gera um numero aleatorio entre 0 e 10
+    printf("O numero aleatorio é: %d\n", aleatorio);
+    int aleatorio2 = rand() % 10 + 1; //gera um numero aleatorio entre 1 e 10
+    printf("O numero aleatorio é: %d\n", aleatorio2);
+    int aleatorio3 = rand() % 21 -10; //gera um numero aleatorio entre -10 e 10
+    printf("O numero aleatorio é: %d\n", aleatorio3);
     
+
+    //matematica
+    printf("O valor de PI é: %f\n", M_PI);//valor de PI com import math (15 casas decimais)
+    printf("O valor de 2 elevado a 3 é: %f\n", pow(2,3));//pow = (numero a ser elevado, potencia)
+    printf("O valor de raiz quadrada de 9 é: %f\n", sqrt(9));//sqrt = raiz quadrada
+    
+    printf("O valor de 9 arredondado é: %f\n", round(9.5));//round = arredondar
+    printf("O valor de 9 truncado é: %f\n", trunc(9.5));//trunc = truncar (cortar as casas decimais, retornando numero inteiro)
+    printf("O valor arrendondado de 9.5 é: %f\n", floor(9.5));//floor = arredondar para baixo
+    printf("O valor arrendondado de 9.5 é: %f\n", ceil(9.5));//ceil = arredondar para cima
+    
+    printf("O valor absoluto é: %f\n", fabs(-9.5));//fabs = valor absoluto
+    
+    printf("O maior valor é: %f\n", fmax(9.5, 2));//fmax = maior valor entre os dois valore
+    printf("O menor valor é: %f\n", fmin(9.5, 2));//fmin = menor valor entre os dois valores
+    printf("A diferença de 9.5 e 2 é: %f\n", fdim(9.5, 2));//fdim = diferença entre dois valores
+    
+    printf("A multiplicação de 9.5 por 2 e soma 3 é: %f\n", fma(9.5, 2, 3));//fma = multiplicação e soma. (numero1 (a ser multiplicado), numero2 (multiplicador), numero3(a ser somado))
+    
+    printf("O valor do resto da divisão de -9.5 e 2 é: %f\n", fmod(-9.5, 2));//fmod = resto da divisão de float, mas sempre retorna o valor do mesmo sinal do primeiro numero(numero a ser dividido)
+    printf("O valor do resto da divisão de 9.5 por 2 é: %f\n", remainder(9.5, 2));//remainder = resto da divisão de float. pode retornar negativo
+    printf("O valor do resto da divisao de 9 por 2 é: %i\n", 9%2);//%x é o resto da divisão por x. sendo ela positiva e inteira.
+   
+    printf("O valor de 9 truncado é: %f\n", copysign(9.5, -2));//copysign = copia o sinal do segundo numero para o primeiro   
     //resto
     int num;
     printf("Digite um número: ");
