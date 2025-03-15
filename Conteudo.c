@@ -208,13 +208,13 @@ int main() {
 
 
 
-
 /*comandos de compilação
 gcc (nome do arquivo.c) -o (nome do arquivo executavel a ser criado)
 ./nome do arquivo executavel
 */
 
 /*Comandos do github
+
 git init (inicia o git)
 git add . (adiciona todos os arquivos)
 git commit -m "mensagem" (comita os arquivos)
@@ -241,3 +241,5 @@ git reset --soft HEAD~1 (volta para o commit anterior)
 git reset --mixed HEAD~1 (volta para o commit anterior)
 git reflog (mostra o log de commits)     
 */
+
+//Feito por: Ian Vinicius Marinho Malta
